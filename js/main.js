@@ -55,9 +55,9 @@ function runWebGL() {
   gl_initShaders();
   gl_initBuffers();
   gl_setMatrix();
-  _cubeTexture_1 = gl_initTexture("img/cubeTexture.png");
-  _cubeTexture_2 = gl_initTexture("img/cubeTexture2.png");
-  _cubeTexture_3 = gl_initTexture("img/cubeTexture3.png");
+  _cubeTexture_1 = gl_initTexture("docs/assets/img/cubeTexture.png");
+  _cubeTexture_2 = gl_initTexture("docs/assets/img/cubeTexture2.png");
+  _cubeTexture_3 = gl_initTexture("docs/assets/img/cubeTexture3.png");
   _whitePixel  = gl_ctx.createTexture();
   gl_ctx.bindTexture(gl_ctx.TEXTURE_2D, _whitePixel);
   var whitePixel = new Uint8Array([255, 255, 255]);
