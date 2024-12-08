@@ -55,9 +55,9 @@ function runWebGL() {
   gl_initShaders();
   gl_initBuffers();
   gl_setMatrix();
-  _cubeTexture_1 = gl_initTexture("docs/assets/cubeTexture.png");
-  _cubeTexture_2 = gl_initTexture("docs/assets/cubeTexture2.png");
-  _cubeTexture_3 = gl_initTexture("docs/assets/cubeTexture3.png");
+  _cubeTexture_1 = gl_initTexture("https://raw.githubusercontent.com/SnicketPolska/SnicketPolska.github.io/refs/heads/master/docs/assets/cubetexture.png");
+  _cubeTexture_2 = gl_initTexture("https://raw.githubusercontent.com/SnicketPolska/SnicketPolska.github.io/refs/heads/master/docs/assets/cubetexture2.png");
+  _cubeTexture_3 = gl_initTexture("https://raw.githubusercontent.com/SnicketPolska/SnicketPolska.github.io/refs/heads/master/docs/assets/cubetexture3.png");
   _whitePixel  = gl_ctx.createTexture();
   gl_ctx.bindTexture(gl_ctx.TEXTURE_2D, _whitePixel);
   var whitePixel = new Uint8Array([255, 255, 255]);
@@ -216,6 +216,7 @@ function gl_initTexture(src) {
   var img = new Image();
   img.src = src;
   img.webglTexture = false;
+  img.crossOrigin = 'anonymous';
   img.onload = function () {
     var texture = gl_ctx.createTexture();
     gl_ctx.pixelStorei(gl_ctx.UNPACK_FLIP_Y_WEBGL, true);
